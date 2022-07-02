@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CoinsServices } from './coins/coins.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-coins-app';
+  // coins:any;
+
+  // constructor(public coin: CoinsServices){}
+
+  // ngOnInit(){
+  //   this.coin.getCoins().subscribe((r)=>{this.coins=r; console.log(r) },
+  //   (e)=>{console.error(e)}
+  //    )
+  // }
 }
