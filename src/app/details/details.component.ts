@@ -1,33 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { DetailsService } from './details.service';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
+  notFound = false;
+  id: any;
 
-  public respuesta: any;
-  constructor(private route:ActivatedRoute, private http: HttpClient) { }
+  constructor(private detailService: DetailsService) {}
 
+  ngOnInit() {}
 
-  ngOnInit(): void {
-    this.route.paramMap.subscribe( (paramMap:any)=>{
-      const {params} =paramMap
+  getDetail(detailId: string) {
+    this.notFound = false;
+    this.id = null;
 
-
-      this.caragarData(params.id)
-    })
+    this.detailService.getDetail(detailId).subscribe(
+      (idFromTheAPI: User) => {
+        this.id = idFromTheAPI;
+      },
+      (err: any) => {
+        console.error(err);
+        this.notFound = true;
+      }
+    );
   }
-
-  caragarData(id:string){
-    this.http.get(`https://api.coingecko.com/api/v3/coins/${id}`)
-    .subscribe(respuesta=>{
-      this.respuesta=respuesta;
-
-    })
-  }
-
 }

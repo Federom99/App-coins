@@ -4,13 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CoinsComponent } from './coins/coins.component';
 import { CoinsServices } from './coins/coins.service';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
-
+import { HomesComponent } from './homes/homes.component';
 
 @NgModule({
   declarations: [
@@ -18,19 +17,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     CoinsComponent,
     HomeComponent,
     DetailsComponent,
-    NavbarComponent
-
+    NavbarComponent,
+    HomesComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
-  providers: [
-    CoinsServices,
-
-
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  providers: [CoinsServices],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

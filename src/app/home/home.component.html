@@ -1,23 +1,19 @@
 <div class="wrapper">
   <div class="gallery">
-    <div class="item" *ngFor="let coinss of coins" >
-      <div class="card" style="width: 18rem;">
-        <img src="{{coinss.image.large}}" class="imgn" alt="">
+    <div class="item" *ngFor="let coinss of coins">
+      <div class="card" style="width: 18rem">
+        <img src="{{ coinss.image.large }}" class="imgn" alt="" />
         <div class="card-body">
-          <h5 class="card-title">Name: {{coinss.name}} </h5>
-          <h6 class="card-text"> Current Price: $USD {{coinss.market_data.current_price.usd}} </h6>
-          <h6 class="card-text"> Abbreviation: {{coinss.symbol}} </h6>
-          <h6 class="card-text"> Rank market: {{coinss.market_data.market_cap_rank}} </h6>
-
-
-
+          <h5 class="card-title">Name: {{ coinss.name }}</h5>
+          <h6 class="card-text">
+            Current Price: $USD {{ coinss.market_data.current_price.usd }}
+          </h6>
+          <h6 class="card-text">Abbreviation: {{ coinss.symbol }}</h6>
+          <h6 class="card-text">
+            Rank market: {{ coinss.market_data.market_cap_rank }}
+          </h6>
         </div>
       </div>
-
-
-
     </div>
   </div>
 </div>
-
-

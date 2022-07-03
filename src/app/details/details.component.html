@@ -1,45 +1,28 @@
-<!-- DATA: {{respuesta.description.en | json}}
 
-<p>description bitcoin:
+<!-- DATA: {{respuesta.description| json}} -->
+<h5 class="h1"> Details Coins</h5>
 
-  Bitcoin is the first successful internet money based on peer-to-peer technology; whereby no central bank or authority is involved in the transaction and production of the Bitcoin currency. It was created by an anonymous individual/group under the name, Satoshi Nakamoto. The source code is available publicly as an open source project, anybody can look at it and be part of the developmental process.\r\n\r\nBitcoin is changing the way we see money as we speak. The idea was to produce a means of exchange, independent of any central authority, that could be transferred electronically in a secure, verifiable and immutable way. It is a decentralized peer-to-peer internet currency making mobile payment easy, very low transaction fees, protects your identity, and it works anywhere all the time with no central authority and banks.\r\n\r\nBitcoin is designed to have only 21 million BTC ever created, thus making it a deflationary currency. Bitcoin uses the "
-</p>
-
-<p>description ethernum:
-   "Ethereum is a smart contract platform  that enables developers to build tokens and decentralized applications (dapps). ETH is the native currency for the Ethereum platform and also works as the transaction fees to miners on the Ethereum network.\r\n\r\nEthereum is the pioneer for blockchain based smart contracts. Smart contract is essentially a computer code that runs exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference. It can facilitate the exchange of money, content, property, shares, or anything of value. When running on the blockchain a smart contract becomes like a self-operating computer program that automatically executes when specific conditions are met.\r\n\r\nEthereum allows programmers to run complete-turing smart contracts that is capable of any customizations. Rather than giving a set of limited operations, Ethereum allows developers to have complete control over customization of their smart contract, giving developers the power to build unique and innovative applications.\r\n\r\nEthereum being the first blockchain based smart contract platform, they have gained much popularity, resulting in new competitors fighting for market share. The competitors includes: Ethereum Classic which is the oldchain of Ethereum. Ethereum wallets are fairly simple to set up with multiple popular choices such as myetherwallet,metamask, and Trezor
-</p>
-
-
-<div class="wrapper">
-  <div class="gallery">
-    <div class="item"  >
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">description bitcoin:
-            Bitcoin is the first successful internet money based on peer-to-peer technology; whereby no central bank or authority is involved in the transaction and production of the Bitcoin currency. It was created by an anonymous individual/group under the name, Satoshi Nakamoto. The source code is available publicly as an open source project, anybody can look at it and be part of the developmental process.\r\n\r\nBitcoin is changing the way we see money as we speak. The idea was to produce a means of exchange, independent of any central authority, that could be transferred electronically in a secure, verifiable and immutable way. It is a decentralized peer-to-peer internet currency making mobile payment easy, very low transaction fees, protects your identity, and it works anywhere all the time with no central authority and banks.\r\n\r\nBitcoin is designed to have only 21 million BTC ever created, thus making it a deflationary currency.
-
-          </h5>
-
-        </div>
-      </div>
+<div class="in">
+<input  class="searchb" type="text" placeholder="Insert an id"  #textId>
+<button class="btn" (click)="getDetail(textId.value)">Get detail coin</button>
 
 
 
+<ng-container *ngIf="id">
+
+  <div class="p">
+
+
+     {{id.description?.en}}
+
+    <div class="image">
+       <img
+          src="https://acegif.com/wp-content/gifs/coin-flip-36.gif"
+          alt="Loading"
+        />
     </div>
+
   </div>
+
+</ng-container>
 </div>
- -->
- <h1>DETAILS</h1>
-
- <div class="card" style="width: 120rem;">
-
-  <p class="p"> Bitcoin:
-
-    Bitcoin is the first successful internet money based on peer-to-peer technology; whereby no central bank or authority is involved in the transaction and production of the Bitcoin currency. It was created by an anonymous individual/group under the name, Satoshi Nakamoto. The source code is available publicly as an open source project, anybody can look at it and be part of the developmental process.\r\n\r\nBitcoin is changing the way we see money as we speak. The idea was to produce a means of exchange, independent of any central authority, that could be transferred electronically in a secure, verifiable and immutable way. It is a decentralized peer-to-peer internet currency making mobile payment easy, very low transaction fees, protects your identity, and it works anywhere all the time with no central authority and banks.\r\n\r\nBitcoin is designed to have only 21 million BTC ever created, thus making it a deflationary currency. Bitcoin uses the "
-  </p>
-
-  <p class="p"> Ethernum:
-    "Ethereum is a smart contract platform  that enables developers to build tokens and decentralized applications (dapps). ETH is the native currency for the Ethereum platform and also works as the transaction fees to miners on the Ethereum network.\r\n\r\nEthereum is the pioneer for blockchain based smart contracts. Smart contract is essentially a computer code that runs exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference. It can facilitate the exchange of money, content, property, shares, or anything of value. When running on the blockchain a smart contract becomes like a self-operating computer program that automatically executes when specific conditions are met.\r\n\r\nEthereum allows programmers to run complete-turing smart contracts that is capable of any customizations. Rather than giving a set of limited operations, Ethereum allows developers to have complete control over customization of their smart contract, giving developers the power to build unique and innovative applications.\r\n\r\nEthereum being the first blockchain based smart contract platform, they have gained much popularity, resulting in new competitors fighting for market share. The competitors includes: Ethereum Classic which is the oldchain of Ethereum. Ethereum wallets are fairly simple to set up with multiple popular choices such as myetherwallet,metamask, and Trezor
- </p>
-  </div>
-
