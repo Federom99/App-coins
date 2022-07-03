@@ -1,28 +1,22 @@
-
 <!-- DATA: {{respuesta.description| json}} -->
-<h5 class="h1"> Details Coins</h5>
+<h5 class="h1">Details Coins</h5>
 
 <div class="in">
-<input  class="searchb" type="text" placeholder="Insert an id"  #textId>
-<button class="btn" (click)="getDetail(textId.value)">Get detail coin</button>
+  <input class="searchb" type="text" placeholder="Insert an id" #textId />
+  <button class="btn" (click)="getDetail(textId.value)">Get detail coin</button>
 
+  <ng-container *ngIf="id">
+    <div class="p">
+      {{ id.description?.en }}
+      <hr>
+      <a class="a" href="{{id.links.homepage[0]}}">Click here to go to the main page of the crypto</a>
 
-
-<ng-container *ngIf="id">
-
-  <div class="p">
-
-
-     {{id.description?.en}}
-
-    <div class="image">
-       <img
+      <div class="image">
+        <img
           src="https://acegif.com/wp-content/gifs/coin-flip-36.gif"
           alt="Loading"
         />
+      </div>
     </div>
-
-  </div>
-
-</ng-container>
+  </ng-container>
 </div>

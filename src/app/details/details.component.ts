@@ -24,7 +24,7 @@ export class DetailsComponent implements OnInit {
         this.id = idFromTheAPI;
       },
       (err: any) => {
-        console.error(err);
+        alert("ID not found!")
         this.notFound = true;
       }
     );
